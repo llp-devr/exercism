@@ -1,19 +1,15 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
-
-// Package twofer should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
 package twofer
 import "fmt"
 
-// ShareWith should have a comment documenting it.
+// ShareWith generates a sharing message based on the given name.
+// If the input name is an empty string, it defaults to "you".
 func ShareWith(name string) string {
-	// Write some code here to pass the test suite.
-	// Then remove all the stock comments.
-	// They're here to help you get started but they only clutter a finished solution.
-	// If you leave them in, reviewers may protest!
+    // If the name is an empty string, set it to the default value "you"
     if name == "" {
-        return "One for you, one for me."
+        name = "you"
     }
+
+    // Use fmt.Sprintf to create a formatted string with the given name
+    // and return the result
 	return fmt.Sprintf("One for %s, one for me.", name)
 }
