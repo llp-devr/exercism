@@ -17,7 +17,7 @@ pub fn create_buffer(count: usize) -> Vec<u8> {
 pub fn fibonacci() -> Vec<u8> {
     let mut cache: Vec<u8> = Vec::new();
 
-    for n in 1..=6 {
+    for n in 0..=5 {
         let result = match n {
             0 => 0,
             1 => 1,
@@ -25,6 +25,6 @@ pub fn fibonacci() -> Vec<u8> {
         };
         cache.push(result);
     }
-
+    cache.remove(0);
     cache
 }
