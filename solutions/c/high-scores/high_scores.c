@@ -20,15 +20,6 @@ int32_t personal_best(const int32_t *scores, size_t scores_len)
     return (max);
 }
 
-int score_comp(const void *p1, const void *p2)
-{
-    int *n1 = (int *) p1;
-    int *n2 = (int *) p2;
-
-    return (*n1 > *n2);
-        
-}
-
 size_t personal_top_three(const int32_t *scores, size_t scores_len,
                           int32_t *output)
 {
